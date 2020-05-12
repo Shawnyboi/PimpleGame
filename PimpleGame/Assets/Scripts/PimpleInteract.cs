@@ -26,6 +26,8 @@ public class PimpleInteract : MonoBehaviour
     private bool pumping;
     private Pimple pimple;
 
+  public float PumpingAmount => pumping ? reductionPerPump : 0;
+
     private void init()
     {
         pimple = GetComponent<Pimple>();
@@ -52,7 +54,6 @@ public class PimpleInteract : MonoBehaviour
         pimple.unfreezeGrowth();
     }
 
-
     private void pumpUpdate(float timeDelta)
     {
         amtReducedOnCurrentPump += Time.deltaTime * pumpRate;
@@ -73,7 +74,4 @@ public class PimpleInteract : MonoBehaviour
             }
         }
     }
-
-
-
 }

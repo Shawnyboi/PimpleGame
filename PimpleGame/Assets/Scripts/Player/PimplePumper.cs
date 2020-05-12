@@ -2,18 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PimplePoker : MonoBehaviour
+public class PimplePumper : MonoBehaviour
 {
   PimpleInteract pimple = null;
+  bool pumping = false;
+  [SerializeField] JuicePouch pouch = null;
+
 
   private void Update()
   {
     if (pimple != null)
     {
-      Debug.Log("Pimple " + pimple);
       if (Input.GetAxis("Fire1") > 0)
       {
+        if (!pumping)
+        {
+          pimple.pumpStart();
+          pumping = true;
+        }
+        pouch.AddJuice(pimple.PumpingAmount);
 
+        //TODO store pimple juice
+      }
+      else
+      {
+        pimple.pumpStop();
+        pumping = false;
       }
     }
   }
@@ -32,7 +46,7 @@ public class PimplePoker : MonoBehaviour
       collision.gameObject.layer == LayerMask.NameToLayer("Pimple") 
       & collision.gameObject.GetComponentInChildren<PimpleInteract>() == pimple)
     {
-      pimple = collision.collider.GetComponentInParent<PimpleInteract>();
+      pimple = null;
     }
   } 
 }
