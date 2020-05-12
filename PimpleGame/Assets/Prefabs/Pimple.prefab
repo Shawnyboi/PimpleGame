@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4661372449746290252}
   - component: {fileID: 3276345306647158412}
   - component: {fileID: 5791784554661263611}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 9114648530834490198}
   - component: {fileID: 7620080315312944176}
   - component: {fileID: 1271951497653237748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pimple
   m_TagString: Untagged
   m_Icon: {fileID: 0}

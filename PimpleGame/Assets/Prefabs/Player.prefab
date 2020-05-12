@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 2715151397758750967}
   - component: {fileID: 2773796745727893489}
   - component: {fileID: 2773796745727893488}
-  m_Layer: 0
+  - component: {fileID: 3552718546960929238}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +113,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &2773796745727893488
 MonoBehaviour:
@@ -128,9 +129,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceleration: 100
   topSpeed: 10
+  turnSpeed: 200
   ground: {fileID: 0}
   feet: {fileID: 956850044188383412}
   dampening: 0.85
+--- !u!114 &3552718546960929238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198166023056336336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa47f0d3d839480ea082acca7f67b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4889460670826975092
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 956850044188383412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +187,7 @@ GameObject:
   - component: {fileID: 6149946598010719222}
   - component: {fileID: 5215341975892035010}
   - component: {fileID: 940724291323750190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}

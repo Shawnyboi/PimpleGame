@@ -7,7 +7,8 @@ public class SphereMover : MonoBehaviour
 {
   Rigidbody body = null;
   [SerializeField] float acceleration = 1f;
-  [SerializeField]float topSpeed = 10f;
+  [SerializeField] float topSpeed = 10f;
+  [SerializeField] float turnSpeed = 10f;
 
   Vector2 cachedInputMovement = Vector2.up;
 
@@ -39,15 +40,22 @@ public class SphereMover : MonoBehaviour
       var cachedRight = new Vector2(cachedInputMovement.y, -cachedInputMovement.x);
       var cos = Mathf.Clamp(Vector3.Dot(inputMovement, cachedInputMovement), -1, 1);
 
-      var angle = Mathf.Acos(cos) * Mathf.Rad2Deg;
+      /*var angle = Mathf.Acos(cos) * Mathf.Rad2Deg;
       if (Vector3.Dot(cachedRight, inputMovement) < 0)
       {
         angle *= -1;
       }
 
-      transform.Rotate(new Vector3(0, angle, 0), Space.Self);
+      // TODO In think there is some gimbal lock happening either here or in the other rotation
+      // TODO or something is getting fucked up by the rigidbody
+      transform.Rotate(new Vector3(0, angle, 0), Space.Self);*/
+      Vector3 force = Vector3.zero;
+      if (inputMovement.y > 0)
+      {
+        force = acceleration * transform.forward;
+      }
+      transform.Rotate(new Vector3(0, turnSpeed * inputMovement.x * Time.deltaTime, 0), Space.Self);
 
-      Vector3 force = acceleration * transform.forward;
       var velocity = body.velocity + (force * Time.deltaTime);
       if (velocity.sqrMagnitude > topSpeed * topSpeed)
       {
