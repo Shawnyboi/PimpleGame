@@ -843,7 +843,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: Mouse X
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1255,7 +1255,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.46553037, y: -0.010403592, z: 0.016539209, w: 0.8848162}
+  m_LocalRotation: {x: 0.46553037, y: -0.01040357, z: 0.016539197, w: 0.8848162}
   m_LocalPosition: {x: -0.58, y: 25.144001, z: -11.889999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1897,7 +1897,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364096622}
-  m_LocalRotation: {x: 0.46564102, y: -0.0022773824, z: 0.0010945159, w: 0.8849701}
+  m_LocalRotation: {x: 0.46564102, y: -0.00227736, z: 0.0010945041, w: 0.8849701}
   m_LocalPosition: {x: -0.58, y: 25.144001, z: -11.889999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2232,6 +2232,11 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 477218456}
+    - target: {fileID: 2773796745727893488, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4198166023056336336, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
       propertyPath: m_Name
