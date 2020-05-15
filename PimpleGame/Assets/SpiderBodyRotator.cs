@@ -24,11 +24,11 @@ public class HasCenterOfGravity : MonoBehaviour
     protected Vector3 raycastToCenterOfGravity()
     {
         RaycastHit hit;
-        if (Physics.Raycast(this.transform.position, centerOfGravity.transform.position - this.transform.position, out hit, 1f, groundLayerMask))
+        if (Physics.Raycast(this.transform.position, -normal(), out hit, 1f, groundLayerMask))
         {
             return hit.point;
         }
-        else if (Physics.Raycast(this.transform.position, this.transform.position - centerOfGravity.transform.position, out hit, 1f, groundLayerMask))
+        else if (Physics.Raycast(this.transform.position, normal(), out hit, 1f, groundLayerMask))
         {
             return hit.point;
         }
@@ -36,6 +36,11 @@ public class HasCenterOfGravity : MonoBehaviour
         {
             return this.transform.position;
         }
+    }
+
+    protected Vector3 normal()
+    {
+       return this.transform.position - centerOfGravity.transform.position;
     }
 }
 
@@ -50,14 +55,14 @@ public class SpiderBodyRotator : HasCenterOfGravity
 
     private void rotateToPerpendicularOfSphere()
     {
-        this.transform.up = this.transform.position - centerOfGravity.position;
+        transform.LookAt(this.transform.position + Vector3.Cross(this.transform.right, normal().normalized), normal());
     }
 
     
     private void standAtHeightAboveSphere()
     {
         Vector3 surfacePoint = raycastToCenterOfGravity();
-        this.transform.position = surfacePoint + standingHeight * (this.transform.position - centerOfGravity.position);
+        this.transform.position = surfacePoint + standingHeight * (normal());
     }
 
     private void Update()
