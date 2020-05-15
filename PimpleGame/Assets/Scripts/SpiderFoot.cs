@@ -76,7 +76,6 @@ public class SpiderFoot : MonoBehaviour
 
     private IEnumerator stickToGround()
     {
-        Debug.Log("Starting stick to gound");
         while (sticking && distanceToFootTarget() < minDistanceToMoveFoot)
         {
             footGroundPoint.position = lastPosition;
@@ -87,7 +86,6 @@ public class SpiderFoot : MonoBehaviour
 
     private IEnumerator moveFoot()
     {
-        Debug.Log("starting Move Foot");
         float timePassedMoving = 0f;
         //only lift foot if moving far
         bool liftFoot = Vector3.Distance(lastPosition, nextPosition) > .01f;
