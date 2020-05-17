@@ -10,7 +10,8 @@ public class SphereFollowCamera : FollowCamera
   {
     if (lookAt != null)
     {
-      var targetToSphere = (sphere.transform.position - lookAt.position).normalized;
+      //var targetToSphere = (sphere.transform.position - lookAt.position).normalized;
+      var targetToSphere = lookAt.position - transform.position;
       var camRight = transform.right;
       var camUp = Vector3.Cross(targetToSphere, camRight);
       camRight = Vector3.Cross(camUp, targetToSphere);
