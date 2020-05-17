@@ -3847,21 +3847,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2773796745727893488, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: ground
+    - target: {fileID: 1760324969, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
-    - target: {fileID: 2773796745727893488, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 963194227}
     - target: {fileID: 4198166023056336336, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
       propertyPath: m_Name
@@ -3922,6 +3911,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8851593741281407740, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: sphere
+      value: 
+      objectReference: {fileID: 477218456}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
 --- !u!1 &1651117213

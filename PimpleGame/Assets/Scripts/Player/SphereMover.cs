@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(SphereSticker))]
 public class SphereMover : MonoBehaviour
 {
   Rigidbody body = null;
+  SphereSticker sticker = null;
   [SerializeField] float acceleration = 1f;
-  [SerializeField] float topSpeed = 10f; 
+  [SerializeField] float topSpeed = 10f;
 
   Vector2 cachedInputMovement = Vector2.up;
 
-  [SerializeField] SphereCollider ground = null;
-  [SerializeField] Transform feet = null;
   [SerializeField] Transform desiredLook = null;
   [SerializeField] Transform actualLook = null;
 
@@ -22,10 +21,7 @@ public class SphereMover : MonoBehaviour
   private void Awake()
   {
     body = GetComponent<Rigidbody>();
-    if (feet == null)
-    {
-      feet = transform; 
-    }
+    sticker = GetComponent<SphereSticker>();
     cachedInputMovement = new Vector2(desiredLook.forward.x, desiredLook.forward.z);
   }
 
@@ -72,17 +68,6 @@ public class SphereMover : MonoBehaviour
       body.velocity *= dampening;
     }
 
-    stickToSphere();
-  }
-
-  private void stickToSphere()
-  {
-    var groundCenterToFeet = (feet.transform.position - ground.transform.position).normalized;
-    var right = actualLook.transform.right;
-
-    actualLook.transform.LookAt(body.position + Vector3.Cross(right, groundCenterToFeet), groundCenterToFeet);
-
-    var feetToBody = body.position - feet.transform.position;
-    body.position = (groundCenterToFeet * (ground.transform.lossyScale.x * ground.radius)) + feetToBody;
+    sticker.StickToSphere();
   }
 }
