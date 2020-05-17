@@ -27,4 +27,7 @@ namespace UnityEngine.Events
   [System.Serializable] public class UnityEventFloat : UnityEvent<float> { }
   [System.Serializable] public class UnityEventDouble : UnityEvent<double> { }
   [System.Serializable] public class UnityEventString : UnityEvent<string> { }
+  [System.Serializable] public class UnityEventVector2 : UnityEvent<Vector2> { }
+  [System.Serializable] public class UnityEventVector3 : UnityEvent<Vector3> { }
+
 }

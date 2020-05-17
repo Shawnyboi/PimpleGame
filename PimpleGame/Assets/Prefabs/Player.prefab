@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStick: 1
   sphere: {fileID: 0}
-  feet: {fileID: 956850044188383412}
+  feet: {fileID: 5523847820746933649}
   looker: {fileID: 5523847820746933649}
 --- !u!1 &2895264720260534455
 GameObject:
@@ -287,6 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5919853192953410917}
   - component: {fileID: 1958851413}
+  - component: {fileID: 614070693558432179}
   m_Layer: 0
   m_Name: ActualLook
   m_TagString: Untagged
@@ -325,6 +326,49 @@ CapsuleCollider:
   m_Height: 1.3316272
   m_Direction: 1
   m_Center: {x: 0, y: 0.74887127, z: -0.15293406}
+--- !u!114 &614070693558432179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404250375002451409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3684ad616730d4e2a96a229c756412ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashModifier: 5
+  dashTime: 0.5
+  dashStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2773796745727893488}
+        m_MethodName: ForceMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dashEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2773796745727893488}
+        m_MethodName: FreeMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  requireTarget: 0
 --- !u!1 &4889460670826975092
 GameObject:
   m_ObjectHideFlags: 0

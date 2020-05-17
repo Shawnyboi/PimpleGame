@@ -18,6 +18,12 @@ public class SphereMover : MonoBehaviour
 
   [SerializeField] float dampening = 0.8f;
 
+  Vector3? forcedDirection = null;
+
+  bool allowInput = true;
+
+  float topSpeedModifier = 1;
+
   private void Awake()
   {
     body = GetComponent<Rigidbody>();
@@ -28,8 +34,22 @@ public class SphereMover : MonoBehaviour
   private void FixedUpdate()
   {
     Vector2 inputMovement = Vector2.zero;
-    inputMovement.x = Input.GetAxis("Horizontal");
-    inputMovement.y = Input.GetAxis("Vertical");
+    //if (allowInput)
+    {
+      inputMovement.x = Input.GetAxis("Horizontal");
+      inputMovement.y = Input.GetAxis("Vertical");
+    }
+
+    if (forcedDirection != null)
+    {
+      var forcedOnNormal = Vector3.Project(forcedDirection.Value, actualLook.up);
+      var forcedOnPlane = forcedDirection.Value - forcedOnNormal;
+      //Debug.Log(inputMovement + " " + forcedOnPlane);
+      //inputMovement = forcedOnPlane;
+      var newRight = Vector3.Cross(actualLook.up, forcedOnPlane.normalized);
+      actualLook.LookAt(actualLook.transform.position + Vector3.Cross(newRight, actualLook.up), actualLook.up);
+      body.velocity = forcedOnPlane * topSpeed * topSpeedModifier;
+    }
 
     if (inputMovement.sqrMagnitude > Helper.Epsilon)
     {
@@ -52,7 +72,7 @@ public class SphereMover : MonoBehaviour
       actualLook.transform.Rotate(new Vector3(0, angle, 0), Space.Self);
 
       var velocity = body.velocity + (force * Time.deltaTime);
-      if (velocity.sqrMagnitude > topSpeed * topSpeed)
+      if (velocity.sqrMagnitude > topSpeed)
       {
         velocity = velocity.normalized * topSpeed;
       }
@@ -69,5 +89,24 @@ public class SphereMover : MonoBehaviour
     }
 
     sticker.StickToSphere();
+  }
+
+  public void AllowInput(bool allow)
+  {
+    allowInput = allow;
+  }
+
+  public void ForceMovement(Vector3 forcedDirection)
+  {
+    allowInput = false;
+    topSpeedModifier = forcedDirection.magnitude;
+    this.forcedDirection = forcedDirection / topSpeedModifier;
+  }
+
+  public void FreeMovement()
+  {
+    allowInput = true;
+    topSpeedModifier = 1;
+    forcedDirection = null;
   }
 }
