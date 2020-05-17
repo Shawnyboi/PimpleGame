@@ -3036,6 +3036,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017006540883177729, guid: f0212d097d51dc948aee790c7ff8287e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4555157039935509473, guid: f0212d097d51dc948aee790c7ff8287e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3496,30 +3501,10 @@ PrefabInstance:
       propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
-    - target: {fileID: 956850044188383412, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4198166023056336336, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5523847820746933649, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919853192953410917, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5919853192953410917, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6827007548718397018, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
@@ -3581,11 +3566,6 @@ PrefabInstance:
       propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
-    - target: {fileID: 8851593741281407740, guid: 30b095f2ce3414de9ad9701d4da11c63,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
 --- !u!1 &1651117213
