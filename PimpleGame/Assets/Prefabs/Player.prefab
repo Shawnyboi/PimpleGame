@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 2773796745727893488}
   - component: {fileID: 8851593741281407740}
   - component: {fileID: 6760903213503347543}
+  - component: {fileID: 3713507681641935591}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -242,6 +243,34 @@ MonoBehaviour:
   desiredLook: {fileID: 5431531159350697154}
   actualLook: {fileID: 5919853192953410917}
   dampening: 0.85
+  onMoveStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3713507681641935591}
+        m_MethodName: SetTrue
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Run
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMoveEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3713507681641935591}
+        m_MethodName: SetFalse
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Run
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8851593741281407740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +306,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3713507681641935591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198166023056336336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e69f2614a29f4a70adcafb97813a16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4404250375002451409
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +393,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6760903213503347543}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dash
           m_BoolArgument: 0
         m_CallState: 2
   dashEnded:
@@ -616,15 +668,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2920780fd1d1a944fa8e673fd54aa656, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284848afab3725b45a4bd5eca5f8e9e3, type: 3}
---- !u!4 &6572825559472397659 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 284848afab3725b45a4bd5eca5f8e9e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2183659552538129985}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5643644443127269252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5773520658685833669, guid: 284848afab3725b45a4bd5eca5f8e9e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2183659552538129985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6572825559472397659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 284848afab3725b45a4bd5eca5f8e9e3,
     type: 3}
   m_PrefabInstance: {fileID: 2183659552538129985}
   m_PrefabAsset: {fileID: 0}

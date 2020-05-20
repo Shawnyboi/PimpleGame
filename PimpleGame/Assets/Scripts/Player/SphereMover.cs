@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(SphereSticker))]
 public class SphereMover : MonoBehaviour
@@ -24,6 +25,12 @@ public class SphereMover : MonoBehaviour
 
   float topSpeedModifier = 1;
 
+  bool wasMoving = false;
+
+  [SerializeField] UnityEvent onMoveStart = null;
+  [SerializeField] UnityEvent onMoveEnd = null;
+
+
   private void Awake()
   {
     body = GetComponent<Rigidbody>();
@@ -34,7 +41,7 @@ public class SphereMover : MonoBehaviour
   private void FixedUpdate()
   {
     Vector2 inputMovement = Vector2.zero;
-    //if (allowInput)
+    if (allowInput)
     {
       inputMovement.x = Input.GetAxis("Horizontal");
       inputMovement.y = Input.GetAxis("Vertical");
@@ -53,6 +60,12 @@ public class SphereMover : MonoBehaviour
 
     if (inputMovement.sqrMagnitude > Helper.Epsilon)
     {
+      if (!wasMoving)
+      {
+        wasMoving = true;
+        onMoveStart.Invoke();
+      }
+
       inputMovement.Normalize();
 
       var cachedRight = new Vector2(cachedInputMovement.y, -cachedInputMovement.x);
@@ -79,12 +92,17 @@ public class SphereMover : MonoBehaviour
 
       body.velocity = velocity;
 
-
+      // TODO this is breaks when dashing and trying to turn because cached input if getting messed up... need to think of a better way to handle this stuff
       cachedInputMovement = inputMovement;
 
     }
     else
     {
+      if (wasMoving)
+      {
+        wasMoving = false;
+        onMoveEnd.Invoke();
+      }
       body.velocity *= dampening;
     }
 
