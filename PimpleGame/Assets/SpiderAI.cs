@@ -8,6 +8,10 @@ public class SpiderAI : MonoBehaviour
 
     public float idleTime = 2f;
     public float walkTime = 2f;
+    public float followDistance = 5f;
+    public float aggroDistance = 10f;
+
+    public GameObject player;
     enum spiderState
     {
         idle,
@@ -18,10 +22,28 @@ public class SpiderAI : MonoBehaviour
 
     private spiderState currentState;
     
+    void init()
+    {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
+
+    private void Awake()
+    {
+        init();
+    }
+
     private void Start()
     {
         currentState = spiderState.idle;
         StartCoroutine(spiderStateMachine());
+    }
+
+    private float getDistanceToPlayer()
+    {
+        return Vector3.Distance(player.transform.position, mover.transform.position);
     }
 
     private IEnumerator handleIdleState()
@@ -34,7 +56,16 @@ public class SpiderAI : MonoBehaviour
             mover.turn(rightOrLeftRoll == 0, Time.deltaTime);
 
             //determine next state
-            currentState = spiderState.wandering;
+            if (getDistanceToPlayer() < aggroDistance)
+            {
+                currentState = spiderState.following;
+            }
+            else
+            {
+                currentState = spiderState.wandering;
+            }
+
+
 
             yield return null;
         }
@@ -49,7 +80,14 @@ public class SpiderAI : MonoBehaviour
             mover.moveForward(Time.deltaTime);
 
             //determine next state
-            currentState = spiderState.idle;
+            if (getDistanceToPlayer() < aggroDistance)
+            {
+                currentState = spiderState.following;
+            }
+            else
+            {
+                currentState = spiderState.idle;
+            }
 
             yield return null;
         }
@@ -57,11 +95,67 @@ public class SpiderAI : MonoBehaviour
 
     private IEnumerator handleChasingState()
     {
+        yield return lookInDirectionOfPlayer();
+        float oldMoveSpeed = mover.moveSpeed;
+        float oldWalkTime = walkTime;
+        walkTime = walkTime / 2f;
+        mover.moveSpeed = mover.moveSpeed * 2f;
+        float timePassed = 0;
+        while (timePassed < walkTime)
+        {
+            timePassed += Time.deltaTime;
+            mover.moveForward(Time.deltaTime);
+            yield return null;
+        }
+        currentState = spiderState.idle;
+        mover.moveSpeed = oldMoveSpeed;
+        walkTime = oldWalkTime;
+        yield return null;
+    }
+
+  
+    private bool playerIsOnRight()
+    {
+        Vector3 vToPlayer = player.transform.position - mover.transform.forward;
+        Vector3 vFwd = mover.transform.forward;
+        Vector3 vRight = mover.transform.right;
+
+        return Vector3.Dot(vRight, vToPlayer) > 0;
+    }
+
+    private IEnumerator lookInDirectionOfPlayer()
+    {
+        bool playerWasOnRight = playerIsOnRight();
+        while (playerWasOnRight == playerIsOnRight())
+        {
+            playerWasOnRight = playerIsOnRight();
+            mover.turn(playerWasOnRight, Time.deltaTime);
+            yield return null;
+        }
+        yield return null;
+    }
+
+    private IEnumerator moveTowardPlayerKeepingDistance()
+    {
+        float timePassed = 0f;
+        while(timePassed < walkTime && getDistanceToPlayer() > followDistance){
+            timePassed += Time.deltaTime;
+            mover.moveForward(Time.deltaTime);
+            yield return null;
+        }
+
+        if(Mathf.Abs(getDistanceToPlayer() - followDistance) < .1f)
+        {
+            currentState = spiderState.chasing;
+        }
         yield return null;
     }
 
     private IEnumerator handleFollowingState()
     {
+       
+        yield return lookInDirectionOfPlayer();
+        yield return moveTowardPlayerKeepingDistance();
         yield return null;
     }
 
@@ -86,6 +180,7 @@ public class SpiderAI : MonoBehaviour
                 default:
                     break;
             }
+            yield return null;
         }
         yield return null;
     }

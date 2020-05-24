@@ -394,6 +394,9 @@ MonoBehaviour:
   mover: {fileID: 2773647480336578182}
   idleTime: 2
   walkTime: 2
+  followDistance: 5
+  aggroDistance: 10
+  player: {fileID: 0}
 --- !u!1 &867932410633383942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1434,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2871227168364259703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac5450c3d146905458499cf5d3da1187, type: 3}
   m_Name: 
@@ -1451,7 +1454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerOfGravity: {fileID: 0}
-  standingHeight: 0.05
+  standingHeight: 0.01
 --- !u!1 &2871227168656222620
 GameObject:
   m_ObjectHideFlags: 0
