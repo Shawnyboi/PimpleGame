@@ -16,6 +16,7 @@ public class SphereMover : MonoBehaviour
 
   [SerializeField] Transform desiredLook = null;
   [SerializeField] Transform actualLook = null;
+  [SerializeField] Transform inputOrientation = null;
 
   [SerializeField] float dampening = 0.8f;
 
@@ -51,8 +52,7 @@ public class SphereMover : MonoBehaviour
     {
       var forcedOnNormal = Vector3.Project(forcedDirection.Value, actualLook.up);
       var forcedOnPlane = forcedDirection.Value - forcedOnNormal;
-      //Debug.Log(inputMovement + " " + forcedOnPlane);
-      //inputMovement = forcedOnPlane;
+
       var newRight = Vector3.Cross(actualLook.up, forcedOnPlane.normalized);
       actualLook.LookAt(actualLook.transform.position + Vector3.Cross(newRight, actualLook.up), actualLook.up);
       body.velocity = forcedOnPlane * topSpeed * topSpeedModifier;
@@ -68,21 +68,19 @@ public class SphereMover : MonoBehaviour
 
       inputMovement.Normalize();
 
-      var cachedRight = new Vector2(cachedInputMovement.y, -cachedInputMovement.x);
-      var cos = Mathf.Clamp(Vector3.Dot(inputMovement, cachedInputMovement), -1, 1);
-      
+      Vector3 force = (inputOrientation.right * inputMovement.x) + (inputOrientation.forward * inputMovement.y);
+      force = force.normalized * acceleration;
+      var targetForward = (force - Vector3.Project(force, actualLook.up)).normalized;
+
+
+      var cos = Mathf.Clamp(Vector3.Dot(actualLook.forward, targetForward), -1, 1);
+
       var angle = Mathf.Acos(cos) * Mathf.Rad2Deg;
-      if (Vector3.Dot(cachedRight, inputMovement) < 0)
+      if (Vector3.Dot(actualLook.right, force) < 0)
       {
         angle *= -1;
       }
-
-      desiredLook.rotation = Quaternion.identity;
-      desiredLook.transform.Rotate(new Vector3(0, angle, 0), Space.Self);
-
-      Vector3 force = Vector3.zero;
-      force = acceleration * actualLook.transform.forward;
-      actualLook.transform.Rotate(new Vector3(0, angle, 0), Space.Self);
+      actualLook.Rotate(new Vector3(0, angle, 0), Space.Self);
 
       var velocity = body.velocity + (force * Time.deltaTime);
       if (velocity.sqrMagnitude > topSpeed)
@@ -91,9 +89,6 @@ public class SphereMover : MonoBehaviour
       }
 
       body.velocity = velocity;
-
-      // TODO this is breaks when dashing and trying to turn because cached input if getting messed up... need to think of a better way to handle this stuff
-      cachedInputMovement = inputMovement;
 
     }
     else
