@@ -8,7 +8,7 @@ public class FollowCamera : MonoBehaviour
   [SerializeField] protected Transform lookAt = null;
   [SerializeField, Tooltip("Distance along the Follow's negative forward vector.")] protected float followDistance = 10f;
 
-  private void Update()
+  private void FixedUpdate()
   {
     updatePosition();
     updateOrientation();
