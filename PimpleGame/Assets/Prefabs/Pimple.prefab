@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthRate: 10
-  minimumLanceableSize: 30
+  minimumLanceableSize: 0
   planetDamageAmount: 34
-  pimpleRenderer: {fileID: 3276345306647158412}
+  pimpleRenderer: {fileID: 0}
 --- !u!114 &1271951497653237748
 MonoBehaviour:
   m_ObjectHideFlags: 0

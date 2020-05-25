@@ -23,7 +23,7 @@ public class PimplePumper : MonoBehaviour
           pimple.pumpStart();
           pumping = true;
         }
-        pouch.AddJuice(pimple.PumpingAmount);
+        pouch.AddJuice(pimple.PumpingAmount * Time.deltaTime);
 
         //TODO store pimple juice
       }
