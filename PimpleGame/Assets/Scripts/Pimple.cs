@@ -6,13 +6,18 @@ public class Pimple : MonoBehaviour
 {
     public float growthRate = 2f;
     public float minimumLanceableSize = 30f;
+    public float planetDamageAmount = 34f;
     private float currentSize; //as a percentage
     private bool growing;
+    private PlanetLife planetLife;
+
 
     private void init()
     {
         currentSize = 0;
         growing = true;
+        planetLife = FindObjectOfType<PlanetLife>();
+
     }
     private void Awake()
     {
@@ -21,6 +26,15 @@ public class Pimple : MonoBehaviour
 
     private void POP()
     {
+        if(planetLife != null)
+        {
+            planetLife.depleteLife(planetDamageAmount);
+        }
+        else
+        {
+            Debug.LogWarning("Pimple popped but no planet to plunder");
+        }
+
         //SPPPPPLLLUUURRRTTT
     }
 
