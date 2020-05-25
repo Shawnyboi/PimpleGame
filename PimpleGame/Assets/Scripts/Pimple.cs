@@ -28,6 +28,7 @@ public class Pimple : MonoBehaviour
     {
         if(planetLife != null)
         {
+            GameObject.Destroy(this.gameObject);
             planetLife.depleteLife(planetDamageAmount);
         }
         else

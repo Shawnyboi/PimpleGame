@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857676186e2c6e4aaf3d9527c159fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growthRate: 2
+  growthRate: 10
   minimumLanceableSize: 30
+  planetDamageAmount: 34
 --- !u!114 &1271951497653237748
 MonoBehaviour:
   m_ObjectHideFlags: 0
