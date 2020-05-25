@@ -34,6 +34,7 @@ public class PimplePumper : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
+    Debug.Log("HIT PIMPLE");
     if (collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
     {
       pimple = collision.collider.GetComponentInParent<PimpleInteract>();

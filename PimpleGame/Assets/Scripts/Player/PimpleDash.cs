@@ -18,17 +18,57 @@ public class PimpleDash : MonoBehaviour
   [SerializeField] bool requireTarget = true;
   Transform target = null;
 
+  [SerializeField] float pimpleSpotDistance = 5;
+  [SerializeField] float pimpleSpotAngle = 90;
+
+  [SerializeField] PimpleSpawner pimpleSpawner = null;
+
   private void Update()
   {
-    if (allowInput && (!requireTarget || target != null))
+    target = null;
+    var dashTo = transform.forward;
+
+    if (allowInput)
     {
       if (Input.GetAxis("Fire1") > 0)
       {
-        dashing = true;
-        dashRemaining = dashTime;
-        var dashTo = (target != null ? (target.position - transform.position) : transform.forward) * dashModifier;
-        dashStarted.Invoke(dashTo);
-        AllowInput(false);
+        if (requireTarget && pimpleSpawner != null)
+        {
+          var pimples = pimpleSpawner.Pimples;
+          float minCos = Mathf.Cos(pimpleSpotAngle);
+          float nearestSqrDist = -1;
+
+          foreach (var pimple in pimples)
+          {
+            if (pimple != null)
+            {
+              var toPimple = pimple.transform.position - transform.position;
+              if (toPimple.sqrMagnitude <= pimpleSpotDistance * pimpleSpotDistance)
+              {
+                var pimplePlanarDireciton = (toPimple - Vector3.Project(toPimple, transform.up)).normalized;
+                var cos = Vector3.Dot(transform.forward, pimplePlanarDireciton);
+                if (cos >= minCos)
+                {
+                  if (nearestSqrDist < 0 || (toPimple.sqrMagnitude < nearestSqrDist))
+                  {
+                    nearestSqrDist = toPimple.sqrMagnitude;
+                    target = pimple.transform;
+                    dashTo = pimplePlanarDireciton;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        if (!requireTarget || target != null)
+        {
+          dashing = true;
+          dashRemaining = dashTime;
+          dashTo *= dashModifier;
+          dashStarted.Invoke(dashTo);
+          AllowInput(false);
+        }
       }
     }
 

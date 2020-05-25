@@ -88,6 +88,7 @@ public class SphereMover : MonoBehaviour
         velocity = velocity.normalized * topSpeed;
       }
 
+      // TODO when hit disable input, blink with i-frames, give some knockback
       body.velocity = velocity;
 
     }

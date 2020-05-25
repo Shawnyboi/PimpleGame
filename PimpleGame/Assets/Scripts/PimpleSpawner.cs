@@ -11,6 +11,7 @@ public class PimpleSpawner : MonoBehaviour
     public GameObject pimplePrefab;
 
     private List<Pimple> pimples;
+  public List<Pimple> Pimples => pimples;
 
     private void init()
     {
