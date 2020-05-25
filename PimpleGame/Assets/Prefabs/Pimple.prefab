@@ -4999,7 +4999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthRate: 10
-  minimumLanceableSize: 0
+  minimumLanceableSize: 20
   planetDamageAmount: 1
   pimpleRenderer: {fileID: 3276345306647158412}
   spawner: {fileID: 0}
