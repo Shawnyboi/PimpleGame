@@ -16,7 +16,7 @@ public class PimpleDash : MonoBehaviour
   [SerializeField] UnityEvent dashEnded = null;
 
   [SerializeField] bool requireTarget = true;
-  Transform target = null;
+  Pimple target = null;
 
   [SerializeField] float pimpleSpotDistance = 5;
   [SerializeField] float pimpleSpotAngle = 90;
@@ -29,6 +29,11 @@ public class PimpleDash : MonoBehaviour
 
     if (allowInput && !dashing)
     {
+      if (target != null)
+      {
+        target.onPopped.RemoveListener(EndDash);
+      }
+
       target = null;
 
       if (Input.GetAxis("Fire1") > 0)
@@ -53,7 +58,8 @@ public class PimpleDash : MonoBehaviour
                   if (nearestSqrDist < 0 || (toPimple.sqrMagnitude < nearestSqrDist))
                   {
                     nearestSqrDist = toPimple.sqrMagnitude;
-                    target = pimple.transform;
+                    target = pimple;
+                    target.onPopped.AddListener(EndDash);
                     dashTo = pimplePlanarDireciton;
                   }
                 }
@@ -86,7 +92,12 @@ public class PimpleDash : MonoBehaviour
     }
   }
 
-  public void EndDash(bool silent = false)
+  public void EndDash()
+  {
+    EndDash(false);
+  }
+
+  public void EndDash(bool silent)
   {
     dashRemaining = 0;
     dashing = false;
@@ -100,10 +111,5 @@ public class PimpleDash : MonoBehaviour
   public void AllowInput(bool allow)
   {
     allowInput = allow;
-  }
-
-  public void SetTarget(GameObject newTarget)
-  {
-    target = newTarget.transform;
   }
 }

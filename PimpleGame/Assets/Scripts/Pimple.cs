@@ -16,6 +16,7 @@ public class Pimple : MonoBehaviour
     [SerializeField] MeshRenderer pimpleRenderer = null;
     [HideInInspector] public PimpleSpawner spawner;
     public UnityEvent onLancedAway = null;
+    public UnityEvent onPopped = null;
 
   private void init()
     {
@@ -43,6 +44,7 @@ public class Pimple : MonoBehaviour
         {
             Debug.LogWarning("Pimple popped but no planet to plunder");
         }
+        onPopped.Invoke();
         GameObject.Destroy(this.gameObject);
         spawner.Pimples.Remove(this);
 

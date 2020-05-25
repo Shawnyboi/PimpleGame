@@ -13,6 +13,7 @@ public class PimplePumper : MonoBehaviour
 
   [SerializeField] UnityEvent onHitPimple = null;
   [SerializeField] UnityEvent onUnhitPimple = null;
+  [SerializeField] UnityEvent onPumpStart = null;
 
   private void Update()
   {
@@ -24,7 +25,9 @@ public class PimplePumper : MonoBehaviour
         {
           pimple.pumpStart();
           pumping = true;
+          onPumpStart.Invoke();
         }
+
         pouch.AddJuice(pimple.PumpingAmount * Time.deltaTime);
 
         //TODO store pimple juice
@@ -44,8 +47,14 @@ public class PimplePumper : MonoBehaviour
 
   public void EndPumping()
   {
+    if (pimple != null)
+    {
+      pimple.pimple.onLancedAway.RemoveListener(EndPumping);
+    }
+
     pumping = false;
     pimple = null;
+
     onUnhitPimple.Invoke();
   }
 
