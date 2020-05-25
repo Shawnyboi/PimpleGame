@@ -7,10 +7,12 @@ public class PimplePumper : MonoBehaviour
 {
   PimpleInteract pimple = null;
   bool pumping = false;
+  bool lookingForPimple = false;
+
   [SerializeField] JuicePouch pouch = null;
 
   [SerializeField] UnityEvent onHitPimple = null;
-  [SerializeField] UnityEvent unHitPimple = null;
+  [SerializeField] UnityEvent onUnhitPimple = null;
 
   private void Update()
   {
@@ -27,7 +29,7 @@ public class PimplePumper : MonoBehaviour
 
         //TODO store pimple juice
       }
-      else
+      else if (pumping)
       {
         pimple.pumpStop();
         pumping = false;
@@ -35,16 +37,30 @@ public class PimplePumper : MonoBehaviour
     }
   }
 
+  public void LookForPimple()
+  {
+    lookingForPimple = true;
+  }
+
+  public void EndPumping()
+  {
+    pumping = false;
+    pimple = null;
+    onUnhitPimple.Invoke();
+  }
+
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
+    if (lookingForPimple && collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
     {
+      lookingForPimple = false;
       pimple = collision.collider.GetComponentInParent<PimpleInteract>();
+      pimple.pimple.onLancedAway.AddListener(EndPumping);
       onHitPimple.Invoke();
     }
   }
 
-  private void OnCollisionExit(Collision collision)
+  /*private void OnCollisionExit(Collision collision)
   {
     if (pimple != null && collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
     {
@@ -52,8 +68,8 @@ public class PimplePumper : MonoBehaviour
       if (hitPimple == pimple)
       {
         pimple = null;
-        unHitPimple.Invoke();
+        onUnhitPimple.Invoke();
       }
     }
-  } 
+  }*/ 
 }

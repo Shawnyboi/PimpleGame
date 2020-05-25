@@ -24,9 +24,9 @@ public class PimpleInteract : MonoBehaviour
     private float amtReducedOnCurrentPump = 0f;
 
     private bool pumping;
-    private Pimple pimple;
+    public Pimple pimple;
 
-  public float PumpingAmount => pumping ? reductionPerPump : 0;
+    public float PumpingAmount => pumping ? reductionPerPump : 0;
 
     private void init()
     {

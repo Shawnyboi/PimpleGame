@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pimple : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Pimple : MonoBehaviour
     private PlanetLife planetLife;
     [SerializeField] MeshRenderer pimpleRenderer = null;
     [HideInInspector] public PimpleSpawner spawner;
+    public UnityEvent onLancedAway = null;
 
   private void init()
     {
@@ -82,6 +84,7 @@ public class Pimple : MonoBehaviour
         currentSize -= amt;
         if (currentSize < 0f)
         {
+            onLancedAway.Invoke();
             killPimple();
         }
     }

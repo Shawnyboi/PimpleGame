@@ -5015,5 +5015,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 0.5
-  maxScale: 2
+  maxScale: 4
   pimpleMesh: {fileID: 8302728316781301769}
