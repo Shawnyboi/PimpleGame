@@ -13,15 +13,18 @@ public class Pimple : MonoBehaviour
     private bool growing;
     private PlanetLife planetLife;
     [SerializeField] MeshRenderer pimpleRenderer = null;
-    public PimpleSpawner spawner;
+    [HideInInspector] public PimpleSpawner spawner;
 
   private void init()
     {
         currentSize = 0;
         growing = true;
         planetLife = FindObjectOfType<PlanetLife>();
-        pimpleRenderer.material.DisableKeyword("_EMISSION");
-  }
+        if (!ReadyToLance)
+        {
+          pimpleRenderer.material.DisableKeyword("_EMISSION");
+        }
+    }
     private void Awake()
     {
         init();

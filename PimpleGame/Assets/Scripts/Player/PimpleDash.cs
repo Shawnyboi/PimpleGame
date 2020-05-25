@@ -94,6 +94,7 @@ public class PimpleDash : MonoBehaviour
 
   public void AllowInput(bool allow)
   {
+    Debug.Log(allow);
     allowInput = allow;
   }
 

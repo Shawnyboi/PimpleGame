@@ -46,12 +46,14 @@ public class PimplePumper : MonoBehaviour
 
   private void OnCollisionExit(Collision collision)
   {
-    if (pimple != null &&
-      collision.gameObject.layer == LayerMask.NameToLayer("Pimple") 
-      & collision.gameObject.GetComponentInChildren<PimpleInteract>() == pimple)
+    if (pimple != null && collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
     {
-      pimple = null;
-      unHitPimple.Invoke();
+      var hitPimple = collision.collider.GetComponentInParent<PimpleInteract>();
+      if (hitPimple == pimple)
+      {
+        pimple = null;
+        unHitPimple.Invoke();
+      }
     }
   } 
 }
