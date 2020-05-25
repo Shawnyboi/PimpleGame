@@ -81,7 +81,9 @@ public class PimpleDash : MonoBehaviour
 
     if (dashing)
     {
-      if (dashRemaining > 0 || target != null)
+      bool hasTarget = target != null && !target.Popped;
+
+      if (dashRemaining > 0 || hasTarget)
       {
         dashRemaining -= Time.deltaTime;
       }
