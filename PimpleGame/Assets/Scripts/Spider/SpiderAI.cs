@@ -144,7 +144,7 @@ public class SpiderAI : MonoBehaviour
             yield return null;
         }
 
-        if(Mathf.Abs(getDistanceToPlayer() - followDistance) < .1f)
+        if(getDistanceToPlayer() < followDistance)
         {
             currentState = spiderState.chasing;
         }
@@ -166,15 +166,19 @@ public class SpiderAI : MonoBehaviour
             switch (currentState)
             {
                 case spiderState.idle:
+                    //Debug.Log("Handling Idle State");
                     yield return StartCoroutine(handleIdleState());
                     break;
                 case spiderState.wandering:
+                    //Debug.Log("Handling Wandering State");
                     yield return StartCoroutine(handleWanderingState());
                     break;
                 case spiderState.chasing:
+                    //Debug.Log("Handling Chasing State");
                     yield return StartCoroutine(handleChasingState());
                     break;
                 case spiderState.following:
+                    //Debug.Log("Handling Following state");
                     yield return StartCoroutine(handleFollowingState());
                     break;
                 default:
