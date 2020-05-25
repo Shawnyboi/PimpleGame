@@ -60,10 +60,6 @@ public class PimpleDash : MonoBehaviour
                     nearestSqrDist = toPimple.sqrMagnitude;
                     target = pimple;
                     target.onPopped.AddListener(EndDash);
-
-                    // TODO This is kinda wonky, but it might prevent getting stuck.
-                    target.freezeGrowth();
-
                     dashTo = pimplePlanarDireciton;
                   }
                 }
