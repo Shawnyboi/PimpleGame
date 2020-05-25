@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PimplePumper : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PimplePumper : MonoBehaviour
   bool pumping = false;
   [SerializeField] JuicePouch pouch = null;
 
+  [SerializeField] UnityEvent onHitPimple = null;
+  [SerializeField] UnityEvent unHitPimple = null;
 
   private void Update()
   {
@@ -34,10 +37,10 @@ public class PimplePumper : MonoBehaviour
 
   private void OnCollisionEnter(Collision collision)
   {
-    Debug.Log("HIT PIMPLE");
     if (collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
     {
       pimple = collision.collider.GetComponentInParent<PimpleInteract>();
+      onHitPimple.Invoke();
     }
   }
 
@@ -48,6 +51,7 @@ public class PimplePumper : MonoBehaviour
       & collision.gameObject.GetComponentInChildren<PimpleInteract>() == pimple)
     {
       pimple = null;
+      unHitPimple.Invoke();
     }
   } 
 }

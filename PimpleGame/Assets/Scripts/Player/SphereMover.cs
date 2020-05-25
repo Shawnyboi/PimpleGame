@@ -123,4 +123,10 @@ public class SphereMover : MonoBehaviour
     topSpeedModifier = 1;
     forcedDirection = null;
   }
+
+  public void Stop()
+  {
+    //topSpeedModifier = 0;
+    body.velocity = Vector3.zero;
+  }
 }

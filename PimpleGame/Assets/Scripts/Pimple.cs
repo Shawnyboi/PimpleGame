@@ -6,13 +6,15 @@ public class Pimple : MonoBehaviour
 {
     public float growthRate = 2f;
     public float minimumLanceableSize = 30f;
+    public bool ReadyToLance => transform.localScale.x >= minimumLanceableSize;
+
     public float planetDamageAmount = 34f;
     private float currentSize; //as a percentage
     private bool growing;
     private PlanetLife planetLife;
+    [SerializeField] MeshRenderer pimpleRenderer = null;
 
-
-    private void init()
+  private void init()
     {
         currentSize = 0;
         growing = true;

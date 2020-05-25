@@ -28,7 +28,7 @@ public class PimpleDash : MonoBehaviour
     target = null;
     var dashTo = transform.forward;
 
-    if (allowInput)
+    if (allowInput && !dashing)
     {
       if (Input.GetAxis("Fire1") > 0)
       {
@@ -40,7 +40,7 @@ public class PimpleDash : MonoBehaviour
 
           foreach (var pimple in pimples)
           {
-            if (pimple != null)
+            if (pimple != null && pimple.ReadyToLance)
             {
               var toPimple = pimple.transform.position - transform.position;
               if (toPimple.sqrMagnitude <= pimpleSpotDistance * pimpleSpotDistance)
@@ -67,7 +67,6 @@ public class PimpleDash : MonoBehaviour
           dashRemaining = dashTime;
           dashTo *= dashModifier;
           dashStarted.Invoke(dashTo);
-          AllowInput(false);
         }
       }
     }
@@ -81,10 +80,16 @@ public class PimpleDash : MonoBehaviour
       }
       else
       {
-        AllowInput(true);
-        dashEnded.Invoke();
+        EndDash();
       }
     }
+  }
+
+  public void EndDash()
+  {
+    dashRemaining = 0;
+    dashing = false;
+    dashEnded.Invoke();
   }
 
   public void AllowInput(bool allow)
