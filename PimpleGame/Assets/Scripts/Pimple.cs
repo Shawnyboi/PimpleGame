@@ -6,21 +6,22 @@ public class Pimple : MonoBehaviour
 {
     public float growthRate = 2f;
     public float minimumLanceableSize = 30f;
-    public bool ReadyToLance => transform.localScale.x >= minimumLanceableSize;
+    public bool ReadyToLance => currentSize >= minimumLanceableSize;
 
     public float planetDamageAmount = 34f;
     private float currentSize; //as a percentage
     private bool growing;
     private PlanetLife planetLife;
     [SerializeField] MeshRenderer pimpleRenderer = null;
+    public PimpleSpawner spawner;
 
   private void init()
     {
         currentSize = 0;
         growing = true;
         planetLife = FindObjectOfType<PlanetLife>();
-
-    }
+        pimpleRenderer.material.DisableKeyword("_EMISSION");
+  }
     private void Awake()
     {
         init();
@@ -37,14 +38,18 @@ public class Pimple : MonoBehaviour
         {
             Debug.LogWarning("Pimple popped but no planet to plunder");
         }
+        GameObject.Destroy(this.gameObject);
+        spawner.Pimples.Remove(this);
 
         //SPPPPPLLLUUURRRTTT
-    }
+  }
 
     private void updateGrowth(float t)
     {
         if (growing)
         {
+            bool wasLanceable = ReadyToLance;
+
             if (currentSize >= 100f)
             {
                 POP();
@@ -52,6 +57,10 @@ public class Pimple : MonoBehaviour
             else
             {
                 currentSize += growthRate * t;
+                if (!wasLanceable && ReadyToLance)
+                {
+                    pimpleRenderer.material.EnableKeyword("_EMISSION");
+                }
             }
         }
     }

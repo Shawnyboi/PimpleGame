@@ -11,7 +11,7 @@ public class PimpleSpawner : MonoBehaviour
     public GameObject pimplePrefab;
 
     private List<Pimple> pimples;
-  public List<Pimple> Pimples => pimples;
+    public List<Pimple> Pimples => pimples;
 
     private void init()
     {
@@ -61,7 +61,7 @@ public class PimpleSpawner : MonoBehaviour
         Quaternion rot = Quaternion.LookRotation(pos - getOrigin());
         inst.transform.rotation = rot;
         pimples.Add(inst.GetComponent<Pimple>());
-
+        inst.GetComponent<Pimple>().spawner = this;
     }
 
     private void Update()
