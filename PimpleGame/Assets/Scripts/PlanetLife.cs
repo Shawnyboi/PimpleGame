@@ -13,10 +13,19 @@ public class PlanetLife : MonoBehaviour
     public float juiceFillRate = 5f;
     public Slider poolSlider;
     public Slider lifeSlider;
+    public GameObject poolCylinder;
+    public float minPoolCylinderPos = -0.626f;
+    public float maxPoolCylinderPos = -0.294f;
 
     private void Awake()
     {
         juicePouch = FindObjectOfType<JuicePouch>();
+        handlePoolHeight();
+    }
+
+    private void handlePoolHeight()
+    {
+        poolCylinder.transform.localPosition = new Vector3(poolCylinder.transform.localPosition.x, Mathf.Lerp(minPoolCylinderPos, maxPoolCylinderPos, pool / 100f), poolCylinder.transform.localPosition.z);
     }
 
     public void depleteLife(float amount)
@@ -27,6 +36,7 @@ public class PlanetLife : MonoBehaviour
         {
             lose();
         }
+        handlePoolHeight();
     }
 
     public void addToPool(float amount)
@@ -37,6 +47,7 @@ public class PlanetLife : MonoBehaviour
         {
             win();
         }
+        handlePoolHeight();
     }
 
     private void win()
