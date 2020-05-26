@@ -14,6 +14,7 @@ public class PimplePumper : MonoBehaviour
   [SerializeField] UnityEvent onHitPimple = null;
   [SerializeField] UnityEvent onUnhitPimple = null;
   [SerializeField] UnityEvent onPumpStart = null;
+  [SerializeField] UnityEvent onPumpStop = null;
 
   private void Update()
   {
@@ -35,6 +36,7 @@ public class PimplePumper : MonoBehaviour
       else if (pumping)
       {
         pimple.pumpStop();
+        onPumpStop.Invoke();
         pumping = false;
       }
     }
@@ -56,6 +58,7 @@ public class PimplePumper : MonoBehaviour
     pimple = null;
 
     onUnhitPimple.Invoke();
+    onPumpStop.Invoke();
   }
 
   private void OnCollisionEnter(Collision collision)

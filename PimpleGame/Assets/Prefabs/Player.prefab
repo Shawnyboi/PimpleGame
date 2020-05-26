@@ -270,6 +270,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 614070693558432179}
+        m_MethodName: AllowInput
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6727156589286887689}
+        m_MethodName: EndPumping
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onMoveEnd:
     m_PersistentCalls:
       m_Calls:
@@ -369,17 +391,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2773796745727893488}
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6760903213503347543}
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -393,29 +404,7 @@ MonoBehaviour:
         m_CallState: 2
   onUnhitPimple:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 614070693558432179}
-        m_MethodName: AllowInput
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2773796745727893488}
-        m_MethodName: FreeMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onPumpStart:
     m_PersistentCalls:
       m_Calls:
@@ -428,6 +417,31 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Pump
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2773796745727893488}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPumpStop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2773796745727893488}
+        m_MethodName: FreeMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4404250375002451409
@@ -683,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef1d17bf936f9942a2cabf5d8e2a297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxWobble: 0.03
+  MaxWobble: 0.003
   WobbleSpeed: 1
   Recovery: 1
 --- !u!1 &6469649264262491140
@@ -856,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef1d17bf936f9942a2cabf5d8e2a297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxWobble: 0.03
+  MaxWobble: 0.01
   WobbleSpeed: 1
   Recovery: 1
 --- !u!1001 &2183659552538129985

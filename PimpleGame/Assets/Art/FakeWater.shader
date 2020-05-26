@@ -89,7 +89,7 @@
            // apply fog
            UNITY_APPLY_FOG(i.fogCoord, col);
            
-           float yPortion = 1 - i.uv.y;
+           float yPortion = (1 - i.uv.y) + (_WobbleX * ((i.uv.x - 0.5) * 2));
            float fillEdge = step(yPortion, _FillAmount * _FillMultiplier);
            float foamEdge = step(_FillAmount, yPortion) - step(_FoamLineWidth, yPortion - _FillAmount);
            
