@@ -9797,7 +9797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pumpRate: 50
-  reductionPerPump: 500
+  reductionPerPump: 34
   pimple: {fileID: 0}
 --- !u!114 &7620080315312944176
 MonoBehaviour:

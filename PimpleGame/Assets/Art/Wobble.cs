@@ -42,7 +42,7 @@ public class Wobble : MonoBehaviour
  
         // velocity
         velocity = (lastPos - transform.position) / Time.deltaTime;
-        angularVelocity = transform.rotation.eulerAngles - lastRot;
+        angularVelocity = Vector3.zero;// transform.rotation.eulerAngles - lastRot;//todo maybe ignore this one
  
  
         // add clamped velocity to wobble
