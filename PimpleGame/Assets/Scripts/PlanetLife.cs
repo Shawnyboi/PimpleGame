@@ -17,9 +17,11 @@ public class PlanetLife : MonoBehaviour
     public GameObject poolCylinder;
     public float minPoolCylinderPos = -0.626f;
     public float maxPoolCylinderPos = -0.294f;
+    public ParticleSystem poolParticles;
 
     private void Awake()
     {
+        poolParticles.Stop();
         juicePouch = FindObjectOfType<JuicePouch>();
         handlePoolHeight();
     }
@@ -90,12 +92,14 @@ public class PlanetLife : MonoBehaviour
     private IEnumerator JUICEIT(JuicePouch jp)
     {
         juicin = true;
+        poolParticles.Play();
         while(juicin && jp.getCurrentJuiceAmount() > 0)
         {
             jp.RemoveJuice(juiceFillRate * Time.deltaTime);
             addToPool(juiceFillRate * pouchToPoolConversionRate * Time.deltaTime);
             yield return null;
         }
+        poolParticles.Stop();
         juicin = false;
     }
     

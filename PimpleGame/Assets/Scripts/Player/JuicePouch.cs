@@ -23,7 +23,7 @@ public class JuicePouch : MonoBehaviour
 
   public void AddJuice(float value)
   {
-    //Debug.Log("Adding juice, current juice amount " + juice);
+    Debug.Log("Adding juice, current juice amount " + juice);
     if (value <= Helper.Epsilon)
     {
       return;

@@ -9796,8 +9796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b213fd7ff212d4cbaa373cbbe20465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpRate: 100
-  reductionPerPump: 10
+  pumpRate: 250
+  reductionPerPump: 20
   pimple: {fileID: 0}
 --- !u!114 &7620080315312944176
 MonoBehaviour:

@@ -323,11 +323,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   juiceFillRate: 5
+  pouchToPoolConversionRate: 0.5
   poolSlider: {fileID: 4951207092854130090}
   lifeSlider: {fileID: 4951207092307194560}
   poolCylinder: {fileID: 5001107825696604987}
   minPoolCylinderPos: -0.626
   maxPoolCylinderPos: -0.294
+  poolParticles: {fileID: 0}
 --- !u!1 &4951207092233563351
 GameObject:
   m_ObjectHideFlags: 0
