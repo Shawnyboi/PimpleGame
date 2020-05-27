@@ -2192,6 +2192,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 9134410757891089556, guid: 94f3077d05803bf41b6bb02fa830fbfa,
+        type: 3}
+      propertyPath: juiceFillRate
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134410757891089556, guid: 94f3077d05803bf41b6bb02fa830fbfa,
+        type: 3}
+      propertyPath: pouchToPoolConversionRate
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94f3077d05803bf41b6bb02fa830fbfa, type: 3}
 --- !u!1 &914137300
@@ -5577,20 +5587,5 @@ PrefabInstance:
       propertyPath: planet
       value: 
       objectReference: {fileID: 477218454}
-    - target: {fileID: 8605725496565810714, guid: 233ce4506d6ece74f80a34e59814e1f5,
-        type: 3}
-      propertyPath: planetRadius
-      value: 17.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605725496565810714, guid: 233ce4506d6ece74f80a34e59814e1f5,
-        type: 3}
-      propertyPath: maxPimples
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605725496565810714, guid: 233ce4506d6ece74f80a34e59814e1f5,
-        type: 3}
-      propertyPath: spawnRate
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233ce4506d6ece74f80a34e59814e1f5, type: 3}

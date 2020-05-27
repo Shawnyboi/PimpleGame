@@ -11,6 +11,7 @@ public class PlanetLife : MonoBehaviour
     private JuicePouch juicePouch;
 
     public float juiceFillRate = 5f;
+    public float pouchToPoolConversionRate = .1f;
     public Slider poolSlider;
     public Slider lifeSlider;
     public GameObject poolCylinder;
@@ -92,7 +93,7 @@ public class PlanetLife : MonoBehaviour
         while(juicin && jp.getCurrentJuiceAmount() > 0)
         {
             jp.RemoveJuice(juiceFillRate * Time.deltaTime);
-            addToPool(juiceFillRate * Time.deltaTime);
+            addToPool(juiceFillRate * pouchToPoolConversionRate * Time.deltaTime);
             yield return null;
         }
         juicin = false;
