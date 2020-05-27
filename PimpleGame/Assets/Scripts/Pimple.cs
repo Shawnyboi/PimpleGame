@@ -89,6 +89,7 @@ public class Pimple : MonoBehaviour
 
     public void reduceSize(float amt)
     {
+        Debug.Log("Reducing Size by " + amt);
         currentSize -= amt;
         if (currentSize < 0f)
         {

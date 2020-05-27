@@ -26,7 +26,7 @@ public class PimpleInteract : MonoBehaviour
     private bool pumping;
     public Pimple pimple;
 
-    public float PumpingAmount => pumping ? reductionPerPump : 0;
+    public float PumpingAmount => pumping ? pumpRate : 0;
 
     private void init()
     {
@@ -56,6 +56,7 @@ public class PimpleInteract : MonoBehaviour
 
     private void pumpUpdate(float timeDelta)
     {
+        Debug.Log("Time.deltaTime in Pimple interact " + Time.deltaTime);
         amtReducedOnCurrentPump += Time.deltaTime * pumpRate;
         pimple.reduceSize(Time.deltaTime * pumpRate);
     }
