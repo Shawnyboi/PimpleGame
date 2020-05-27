@@ -57,11 +57,15 @@ public class PimpleSpawner : MonoBehaviour
     private void spawnPimple()
     {
         Vector3 pos = getSpawnPosition();
-        GameObject inst = Instantiate(pimplePrefab, pos, Quaternion.identity);
-        Quaternion rot = Quaternion.LookRotation(pos - getOrigin());
-        inst.transform.rotation = rot;
-        pimples.Add(inst.GetComponent<Pimple>());
-        inst.GetComponent<Pimple>().spawner = this;
+
+        if (!Physics.Raycast(getOrigin(), pos - getOrigin(), 1 << LayerMask.NameToLayer("DontSpawnOn")))
+        {
+            GameObject inst = Instantiate(pimplePrefab, pos, Quaternion.identity);
+            Quaternion rot = Quaternion.LookRotation(pos - getOrigin());
+            inst.transform.rotation = rot;
+            pimples.Add(inst.GetComponent<Pimple>());
+            inst.GetComponent<Pimple>().spawner = this;
+        }
     }
 
     private void Update()
