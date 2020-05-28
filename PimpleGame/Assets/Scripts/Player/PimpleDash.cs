@@ -23,6 +23,8 @@ public class PimpleDash : MonoBehaviour
 
   [SerializeField] PimpleSpawner pimpleSpawner = null;
 
+  float cachedSqrDist = -1;
+
   private void Update()
   {
     var dashTo = transform.forward;
@@ -61,6 +63,7 @@ public class PimpleDash : MonoBehaviour
                     target = pimple;
                     target.onPopped.AddListener(EndDash);
                     dashTo = pimplePlanarDireciton;
+                    cachedSqrDist = nearestSqrDist;
                   }
                 }
               }
@@ -82,6 +85,11 @@ public class PimpleDash : MonoBehaviour
     if (dashing)
     {
       bool hasTarget = target != null && !target.Popped;
+
+      if (hasTarget && (target.transform.position - transform.position).sqrMagnitude > cachedSqrDist)
+      {
+        hasTarget = false;
+      }
 
       if (dashRemaining > 0 || hasTarget)
       {
