@@ -8614,6 +8614,41 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.523
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41028976
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91195524
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073586487904646205, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 48.446003
+      objectReference: {fileID: 0}
     - target: {fileID: 2197192334224531233, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
       propertyPath: m_Layer
@@ -9124,6 +9159,11 @@ PrefabInstance:
       propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
+    - target: {fileID: 8926830861425809380, guid: 30b095f2ce3414de9ad9701d4da11c63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
 --- !u!4 &1574378908 stripped
@@ -10613,5 +10653,15 @@ PrefabInstance:
       propertyPath: planet
       value: 
       objectReference: {fileID: 477218454}
+    - target: {fileID: 8605725496565810714, guid: 233ce4506d6ece74f80a34e59814e1f5,
+        type: 3}
+      propertyPath: minSpawnRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605725496565810714, guid: 233ce4506d6ece74f80a34e59814e1f5,
+        type: 3}
+      propertyPath: maxSpawnRate
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 233ce4506d6ece74f80a34e59814e1f5, type: 3}

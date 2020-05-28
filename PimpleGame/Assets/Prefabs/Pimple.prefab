@@ -9743,7 +9743,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8302728316781301769}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 32b99c90c633eb14e9088df07b1415b7, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -9796,8 +9796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b213fd7ff212d4cbaa373cbbe20465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpRate: 50
-  reductionPerPump: 20
+  pumpRate: 500
+  reductionPerPump: 50
   pimple: {fileID: 0}
 --- !u!114 &7620080315312944176
 MonoBehaviour:
