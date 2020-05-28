@@ -21,6 +21,6 @@ public class PumpPimpAudio : MonoBehaviour
     }
     public void ResetPitch()
     {
-        PimpSource.pitch = 0.5f;
+        PimpSource.pitch = 0.5f; 
     }
 }
