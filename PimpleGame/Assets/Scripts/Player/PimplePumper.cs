@@ -62,7 +62,7 @@ public class PimplePumper : MonoBehaviour
         onPumpStop.Invoke();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (lookingForPimple && collision.gameObject.layer == LayerMask.NameToLayer("Pimple"))
         {
