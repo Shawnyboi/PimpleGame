@@ -18,6 +18,7 @@ public class Wobble : MonoBehaviour
     float wobbleAmountToAddZ;
     float pulse;
     float time = 0.5f;
+    [SerializeField] int materialIndex = 0;
    
     // Use this for initialization
     void Start()
@@ -37,8 +38,8 @@ public class Wobble : MonoBehaviour
         wobbleAmountZ = wobbleAmountToAddZ * Mathf.Sin(pulse * time);
  
         // send it to the shader
-        rend.material.SetFloat("_WobbleX", wobbleAmountX);
-        rend.material.SetFloat("_WobbleZ", wobbleAmountZ);
+        rend.materials[materialIndex].SetFloat("_WobbleX", wobbleAmountX);
+        rend.materials[materialIndex].SetFloat("_WobbleZ", wobbleAmountZ);
  
         // velocity
         velocity = (lastPos - transform.position) / Time.deltaTime;

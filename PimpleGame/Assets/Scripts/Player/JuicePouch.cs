@@ -8,7 +8,7 @@ public class JuicePouch : MonoBehaviour
     [SerializeField] float maxJuice = 100;
     [SerializeField] float minScale = 1;
     [SerializeField] float maxScale = 3;
-    [SerializeField] MeshRenderer juiceRenderer = null;
+    [SerializeField] SkinnedMeshRenderer juiceRenderer = null;
     [SerializeField] int juiceMaterial = 0;
 
     private void Start()
