@@ -17,11 +17,21 @@ public class PimpleSpawner : MonoBehaviour
     private float spawnRate;
     private float timePassed;
 
+    bool paused = false;
+
     private List<Pimple> pimples;
     public List<Pimple> Pimples => pimples;
 
+    private void OnDestroy()
+    {
+        GamePauser.OnGamePause -= pause;
+        GamePauser.OnGameUnpause -= unpause;
+    }
+
     private void init()
     {
+        GamePauser.OnGamePause += pause;
+        GamePauser.OnGameUnpause += unpause;
         pimples = new List<Pimple>();
         spawnRate = minSpawnRate;
     }
@@ -87,10 +97,21 @@ public class PimpleSpawner : MonoBehaviour
         timePassed += Time.deltaTime;
         if(pimples.Count < maxPimples)
         {
-            if (rollForSpawn(Time.deltaTime))
+            if (rollForSpawn(Time.deltaTime) && !paused)
             {
                 spawnPimple();
             }
         }
     }
+
+    void pause()
+    {
+        paused = true;
+    }
+
+    void unpause()
+    {
+        paused = false;
+    }
+
 }

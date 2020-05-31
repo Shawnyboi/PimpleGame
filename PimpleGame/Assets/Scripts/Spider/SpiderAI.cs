@@ -12,6 +12,8 @@ public class SpiderAI : MonoBehaviour
     public float aggroDistance = 10f;
 
     public GameObject player;
+
+    private bool AIPaused = false;
     enum spiderState
     {
         idle,
@@ -21,9 +23,17 @@ public class SpiderAI : MonoBehaviour
     }
 
     private spiderState currentState;
-    
+
+    private void OnDestroy()
+    {
+        GamePauser.OnGamePause -= pauseAI;
+        GamePauser.OnGameUnpause -= unpauseAI;
+    }
+
     void init()
     {
+        GamePauser.OnGamePause += pauseAI;
+        GamePauser.OnGameUnpause += unpauseAI;
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
@@ -163,29 +173,45 @@ public class SpiderAI : MonoBehaviour
     {
         while (true)
         {
-            switch (currentState)
+            if (AIPaused) {
+                yield return null;
+            }
+            else
             {
-                case spiderState.idle:
-                    //Debug.Log("Handling Idle State");
-                    yield return StartCoroutine(handleIdleState());
-                    break;
-                case spiderState.wandering:
-                    //Debug.Log("Handling Wandering State");
-                    yield return StartCoroutine(handleWanderingState());
-                    break;
-                case spiderState.chasing:
-                    //Debug.Log("Handling Chasing State");
-                    yield return StartCoroutine(handleChasingState());
-                    break;
-                case spiderState.following:
-                    //Debug.Log("Handling Following state");
-                    yield return StartCoroutine(handleFollowingState());
-                    break;
-                default:
-                    break;
+                switch (currentState)
+                {
+                    case spiderState.idle:
+                        //Debug.Log("Handling Idle State");
+                        yield return StartCoroutine(handleIdleState());
+                        break;
+                    case spiderState.wandering:
+                        //Debug.Log("Handling Wandering State");
+                        yield return StartCoroutine(handleWanderingState());
+                        break;
+                    case spiderState.chasing:
+                        //Debug.Log("Handling Chasing State");
+                        yield return StartCoroutine(handleChasingState());
+                        break;
+                    case spiderState.following:
+                        //Debug.Log("Handling Following state");
+                        yield return StartCoroutine(handleFollowingState());
+                        break;
+                    default:
+                        break;
+                }
             }
             yield return null;
         }
         yield return null;
+    }
+
+    private void pauseAI()
+    {
+        AIPaused = true;
+    }
+
+    private void unpauseAI()
+    {
+        AIPaused = false;
     }
 }
