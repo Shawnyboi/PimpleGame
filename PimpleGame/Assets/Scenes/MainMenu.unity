@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 82797209}
   - component: {fileID: 82797208}
   - component: {fileID: 82797207}
+  - component: {fileID: 82797210}
   m_Layer: 8
   m_Name: Sphere (34)
   m_TagString: Untagged
@@ -214,6 +215,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82797205}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &82797210
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82797205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &128849736
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +246,7 @@ GameObject:
   - component: {fileID: 128849740}
   - component: {fileID: 128849739}
   - component: {fileID: 128849738}
+  - component: {fileID: 128849741}
   m_Layer: 8
   m_Name: Sphere (18)
   m_TagString: Untagged
@@ -307,6 +328,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128849736}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &128849741
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128849736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &136013304
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +359,7 @@ GameObject:
   - component: {fileID: 136013308}
   - component: {fileID: 136013307}
   - component: {fileID: 136013306}
+  - component: {fileID: 136013309}
   m_Layer: 8
   m_Name: Sphere (9)
   m_TagString: Untagged
@@ -400,6 +441,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136013304}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &136013309
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136013304}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &191915748
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +472,7 @@ GameObject:
   - component: {fileID: 191915752}
   - component: {fileID: 191915751}
   - component: {fileID: 191915750}
+  - component: {fileID: 191915753}
   m_Layer: 8
   m_Name: Sphere (32)
   m_TagString: Untagged
@@ -493,6 +554,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191915748}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &191915753
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191915748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &216334753
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +585,7 @@ GameObject:
   - component: {fileID: 216334757}
   - component: {fileID: 216334756}
   - component: {fileID: 216334755}
+  - component: {fileID: 216334758}
   m_Layer: 8
   m_Name: Sphere (13)
   m_TagString: Untagged
@@ -586,6 +667,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216334753}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &216334758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216334753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &322129386
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +698,7 @@ GameObject:
   - component: {fileID: 322129390}
   - component: {fileID: 322129389}
   - component: {fileID: 322129388}
+  - component: {fileID: 322129391}
   m_Layer: 8
   m_Name: Sphere (15)
   m_TagString: Untagged
@@ -679,6 +780,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322129386}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &322129391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322129386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &329377265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1158,7 @@ GameObject:
   - component: {fileID: 374206343}
   - component: {fileID: 374206342}
   - component: {fileID: 374206341}
+  - component: {fileID: 374206344}
   m_Layer: 8
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -1119,6 +1240,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374206339}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &374206344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374206339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &394284679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1271,7 @@ GameObject:
   - component: {fileID: 394284683}
   - component: {fileID: 394284682}
   - component: {fileID: 394284681}
+  - component: {fileID: 394284684}
   m_Layer: 8
   m_Name: Sphere (11)
   m_TagString: Untagged
@@ -1212,6 +1353,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394284679}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &394284684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394284679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &420289336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1477,7 @@ GameObject:
   - component: {fileID: 447805579}
   - component: {fileID: 447805578}
   - component: {fileID: 447805577}
+  - component: {fileID: 447805580}
   m_Layer: 8
   m_Name: Sphere (16)
   m_TagString: Untagged
@@ -1398,6 +1559,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447805575}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &447805580
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447805575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &474627265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1590,7 @@ GameObject:
   - component: {fileID: 474627269}
   - component: {fileID: 474627268}
   - component: {fileID: 474627267}
+  - component: {fileID: 474627270}
   m_Layer: 8
   m_Name: Sphere (37)
   m_TagString: Untagged
@@ -1491,6 +1672,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474627265}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &474627270
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474627265}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &477218454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1703,7 @@ GameObject:
   - component: {fileID: 477218458}
   - component: {fileID: 477218457}
   - component: {fileID: 477218456}
+  - component: {fileID: 477218459}
   m_Layer: 11
   m_Name: Sphere
   m_TagString: Planet
@@ -1555,7 +1756,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e920b86a5949f3947b100d606283fbde, type: 2}
+  - {fileID: 2100000, guid: 08f584881dcdb5540a406616235d9fe3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1584,6 +1785,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477218454}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &477218459
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477218454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &533373020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1892,7 @@ GameObject:
   - component: {fileID: 563280836}
   - component: {fileID: 563280835}
   - component: {fileID: 563280834}
+  - component: {fileID: 563280837}
   m_Layer: 8
   m_Name: Sphere (19)
   m_TagString: Untagged
@@ -1753,6 +1974,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563280832}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &563280837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563280832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &585495168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8069382348487635705, guid: 55053b3b7cbd7284cbd5c6129ba446fa,
@@ -1921,6 +2161,7 @@ GameObject:
   - component: {fileID: 599791116}
   - component: {fileID: 599791115}
   - component: {fileID: 599791114}
+  - component: {fileID: 599791117}
   m_Layer: 8
   m_Name: Sphere (8)
   m_TagString: Untagged
@@ -2002,6 +2243,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599791112}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &599791117
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599791112}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &690200053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,6 +2918,7 @@ GameObject:
   - component: {fileID: 784547661}
   - component: {fileID: 784547660}
   - component: {fileID: 784547659}
+  - component: {fileID: 784547662}
   m_Layer: 8
   m_Name: Sphere (27)
   m_TagString: Untagged
@@ -2739,6 +3000,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784547657}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &784547662
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784547657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &813444114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,6 +3031,7 @@ GameObject:
   - component: {fileID: 813444118}
   - component: {fileID: 813444117}
   - component: {fileID: 813444116}
+  - component: {fileID: 813444119}
   m_Layer: 8
   m_Name: Sphere (17)
   m_TagString: Untagged
@@ -2832,6 +3113,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813444114}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &813444119
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813444114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &853983774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,6 +3144,7 @@ GameObject:
   - component: {fileID: 853983778}
   - component: {fileID: 853983777}
   - component: {fileID: 853983776}
+  - component: {fileID: 853983779}
   m_Layer: 8
   m_Name: Sphere (28)
   m_TagString: Untagged
@@ -2925,6 +3226,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853983774}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &853983779
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853983774}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &896101734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,6 +3257,7 @@ GameObject:
   - component: {fileID: 896101738}
   - component: {fileID: 896101737}
   - component: {fileID: 896101736}
+  - component: {fileID: 896101739}
   m_Layer: 8
   m_Name: Sphere (31)
   m_TagString: Untagged
@@ -3018,6 +3339,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896101734}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &896101739
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896101734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &914137300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3537,7 @@ GameObject:
   - component: {fileID: 950182779}
   - component: {fileID: 950182778}
   - component: {fileID: 950182777}
+  - component: {fileID: 950182780}
   m_Layer: 8
   m_Name: Sphere (23)
   m_TagString: Untagged
@@ -3278,6 +3619,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950182775}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &950182780
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950182775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,6 +3986,7 @@ GameObject:
   - component: {fileID: 1119350940}
   - component: {fileID: 1119350939}
   - component: {fileID: 1119350938}
+  - component: {fileID: 1119350941}
   m_Layer: 8
   m_Name: Sphere (29)
   m_TagString: Untagged
@@ -3707,6 +4068,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119350936}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1119350941
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119350936}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1120368683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3719,6 +4099,7 @@ GameObject:
   - component: {fileID: 1120368687}
   - component: {fileID: 1120368686}
   - component: {fileID: 1120368685}
+  - component: {fileID: 1120368688}
   m_Layer: 8
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -3800,6 +4181,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120368683}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1120368688
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120368683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1163877270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,6 +4212,7 @@ GameObject:
   - component: {fileID: 1163877274}
   - component: {fileID: 1163877273}
   - component: {fileID: 1163877272}
+  - component: {fileID: 1163877275}
   m_Layer: 8
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -3893,6 +4294,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163877270}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1163877275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163877270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1173368677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,6 +4325,7 @@ GameObject:
   - component: {fileID: 1173368681}
   - component: {fileID: 1173368680}
   - component: {fileID: 1173368679}
+  - component: {fileID: 1173368682}
   m_Layer: 8
   m_Name: Sphere (21)
   m_TagString: Untagged
@@ -3986,6 +4407,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173368677}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1173368682
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173368677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1185923828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,6 +4438,7 @@ GameObject:
   - component: {fileID: 1185923832}
   - component: {fileID: 1185923831}
   - component: {fileID: 1185923830}
+  - component: {fileID: 1185923833}
   m_Layer: 8
   m_Name: Sphere (35)
   m_TagString: Untagged
@@ -4079,6 +4520,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185923828}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1185923833
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185923828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1239762988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,6 +4551,7 @@ GameObject:
   - component: {fileID: 1239762992}
   - component: {fileID: 1239762991}
   - component: {fileID: 1239762990}
+  - component: {fileID: 1239762993}
   m_Layer: 8
   m_Name: Sphere (12)
   m_TagString: Untagged
@@ -4172,6 +4633,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239762988}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1239762993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239762988}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1256387396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4268,6 +4748,7 @@ GameObject:
   - component: {fileID: 1272376354}
   - component: {fileID: 1272376353}
   - component: {fileID: 1272376352}
+  - component: {fileID: 1272376355}
   m_Layer: 8
   m_Name: Sphere (33)
   m_TagString: Untagged
@@ -4349,6 +4830,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272376350}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1272376355
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272376350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1364096622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4928,7 @@ GameObject:
   - component: {fileID: 1396654998}
   - component: {fileID: 1396654997}
   - component: {fileID: 1396654996}
+  - component: {fileID: 1396654999}
   m_Layer: 8
   m_Name: Sphere (6)
   m_TagString: Untagged
@@ -4509,6 +5010,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396654994}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1396654999
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396654994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1410634423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +5267,7 @@ GameObject:
   - component: {fileID: 1534425875}
   - component: {fileID: 1534425874}
   - component: {fileID: 1534425873}
+  - component: {fileID: 1534425876}
   m_Layer: 8
   m_Name: Sphere (5)
   m_TagString: Untagged
@@ -4828,6 +5349,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534425871}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1534425876
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534425871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1569023200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,6 +6239,7 @@ GameObject:
   - component: {fileID: 1651117217}
   - component: {fileID: 1651117216}
   - component: {fileID: 1651117215}
+  - component: {fileID: 1651117218}
   m_Layer: 8
   m_Name: Sphere (26)
   m_TagString: Untagged
@@ -5780,6 +6321,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651117213}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1651117218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651117213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1657271784
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,6 +6352,7 @@ GameObject:
   - component: {fileID: 1657271788}
   - component: {fileID: 1657271787}
   - component: {fileID: 1657271786}
+  - component: {fileID: 1657271789}
   m_Layer: 8
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -5873,6 +6434,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657271784}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1657271789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657271784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1800223437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5885,6 +6465,7 @@ GameObject:
   - component: {fileID: 1800223441}
   - component: {fileID: 1800223440}
   - component: {fileID: 1800223439}
+  - component: {fileID: 1800223442}
   m_Layer: 8
   m_Name: Sphere (30)
   m_TagString: Untagged
@@ -5966,6 +6547,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800223437}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1800223442
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800223437}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1830788951
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6694,7 @@ GameObject:
   - component: {fileID: 1834468852}
   - component: {fileID: 1834468851}
   - component: {fileID: 1834468850}
+  - component: {fileID: 1834468853}
   m_Layer: 8
   m_Name: Sphere (22)
   m_TagString: Untagged
@@ -6175,6 +6776,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834468848}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1834468853
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834468848}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fdc4cc20ce007b479eab9152dc7befe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1871541523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6827007548718397018, guid: 30b095f2ce3414de9ad9701d4da11c63,
@@ -6193,6 +6813,7 @@ GameObject:
   - component: {fileID: 1877428953}
   - component: {fileID: 1877428952}
   - component: {fileID: 1877428951}
+  - component: {fileID: 1877428954}
   m_Layer: 8
   m_Name: Sphere (25)
   m_TagString: Untagged
@@ -6274,6 +6895,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877428949}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1877428954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877428949}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1879631871
 GameObject:
   m_ObjectHideFlags: 0
@@ -6481,6 +7121,7 @@ GameObject:
   - component: {fileID: 1885953305}
   - component: {fileID: 1885953304}
   - component: {fileID: 1885953303}
+  - component: {fileID: 1885953306}
   m_Layer: 8
   m_Name: Sphere (7)
   m_TagString: Untagged
@@ -6562,6 +7203,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885953301}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1885953306
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885953301}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cdd0a2891274d9458f59bf99982cd98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1887239129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6574,6 +7234,7 @@ GameObject:
   - component: {fileID: 1887239133}
   - component: {fileID: 1887239132}
   - component: {fileID: 1887239131}
+  - component: {fileID: 1887239134}
   m_Layer: 8
   m_Name: Sphere (36)
   m_TagString: Untagged
@@ -6655,6 +7316,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887239129}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &1887239134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887239129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1897596545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6831,6 +7511,7 @@ GameObject:
   - component: {fileID: 2082282279}
   - component: {fileID: 2082282278}
   - component: {fileID: 2082282277}
+  - component: {fileID: 2082282280}
   m_Layer: 8
   m_Name: Sphere (10)
   m_TagString: Untagged
@@ -6912,6 +7593,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082282275}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &2082282280
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082282275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c095a0268f73d04dab779a50a5e233f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2101369737
 GameObject:
   m_ObjectHideFlags: 0
@@ -6924,6 +7624,7 @@ GameObject:
   - component: {fileID: 2101369741}
   - component: {fileID: 2101369740}
   - component: {fileID: 2101369739}
+  - component: {fileID: 2101369742}
   m_Layer: 8
   m_Name: Sphere (24)
   m_TagString: Untagged
@@ -7005,6 +7706,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101369737}
   m_Mesh: {fileID: 4711208715938537054, guid: 8932808d40ee0ab4ebd450e7faf32adb, type: 3}
+--- !u!95 &2101369742
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101369737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfd6309066723d74c9b821b78ad1da6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2115399619
 GameObject:
   m_ObjectHideFlags: 0
