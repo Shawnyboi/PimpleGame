@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.099018015, g: 0.36616504, b: 0.43491778, a: 1}
+  m_IndirectSpecularColor: {r: 0.09895589, g: 0.3660338, b: 0.43477935, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12974,6 +12974,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 551514052874401155, guid: 91528dee4930d1f46a70e9e2f22e3420,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551514052874401155, guid: 91528dee4930d1f46a70e9e2f22e3420,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 712245220401137176, guid: 91528dee4930d1f46a70e9e2f22e3420,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -13028,6 +13038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064172267697376607, guid: 91528dee4930d1f46a70e9e2f22e3420,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1242862864977196795, guid: 91528dee4930d1f46a70e9e2f22e3420,
         type: 3}
@@ -13119,6 +13134,16 @@ PrefabInstance:
       propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
+    - target: {fileID: 5721471202840730960, guid: 91528dee4930d1f46a70e9e2f22e3420,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721471202840730960, guid: 91528dee4930d1f46a70e9e2f22e3420,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7277387689973386654, guid: 91528dee4930d1f46a70e9e2f22e3420,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
