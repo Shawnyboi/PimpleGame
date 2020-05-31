@@ -9,18 +9,19 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Sphere 2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _NORMALMAP
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d528e8b0cd807e642887ffc7a3a8dff4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 17ace90537b8e4744b0c299b9aef51de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +41,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e90c77a2d556a5842a57dbbb3ad79770, type: 3}
+        m_Texture: {fileID: 2800000, guid: c916bbb37afe023439193bfc77be1669, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: de84d89abfb9d7b43b3a178ea510df02, type: 3}
+        m_Texture: {fileID: 2800000, guid: d651a021110064041b602dbf7c31ee34, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,19 +60,19 @@ Material:
     - _BumpScale: 0.85
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 0.87
+    - _DstBlend: 10
+    - _GlossMapScale: 0.874
     - _Glossiness: 0.474
     - _GlossyReflections: 1
     - _Metallic: 0
-    - _Mode: 0
+    - _Mode: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 1.39772, b: 0.64074284, a: 1}
+    - _Color: {r: 0.9575472, g: 1, b: 0.99700254, a: 1}
+    - _EmissionColor: {r: 0, g: 0.46666667, b: 0.45490196, a: 1}
