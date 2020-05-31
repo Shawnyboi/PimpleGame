@@ -9872,6 +9872,8 @@ MonoBehaviour:
   onPopped:
     m_PersistentCalls:
       m_Calls: []
+  explosion: {fileID: 3435410265306927714, guid: c9c2c10ce2cf73441956b74bb7da57de,
+    type: 3}
 --- !u!114 &1271951497653237748
 MonoBehaviour:
   m_ObjectHideFlags: 0
