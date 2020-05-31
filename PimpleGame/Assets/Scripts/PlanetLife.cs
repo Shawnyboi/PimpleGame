@@ -19,8 +19,11 @@ public class PlanetLife : MonoBehaviour
     public float maxPoolCylinderPos = -0.294f;
     public ParticleSystem poolParticles;
 
+    AudioSource fillAudio;
+
     private void Awake()
     {
+        fillAudio = GameObject.Find("FillAudio").GetComponent<AudioSource>();
         poolParticles.Stop();
         juicePouch = FindObjectOfType<JuicePouch>();
         handlePoolHeight();
@@ -93,13 +96,17 @@ public class PlanetLife : MonoBehaviour
     {
         juicin = true;
         poolParticles.Play();
-        while(juicin && jp.getCurrentJuiceAmount() > 0)
+        fillAudio.pitch = 0.6f;
+        fillAudio.Play();
+        while (juicin && jp.getCurrentJuiceAmount() > 0)
         {
+            fillAudio.pitch += 0.006f;
             jp.RemoveJuice(juiceFillRate * Time.deltaTime);
             addToPool(juiceFillRate * pouchToPoolConversionRate * Time.deltaTime);
             yield return null;
         }
         poolParticles.Stop();
+        fillAudio.Stop();
         juicin = false;
     }
     
