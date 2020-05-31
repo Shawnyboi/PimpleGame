@@ -22,8 +22,10 @@ public class Pimple : MonoBehaviour
 
     bool popped = false;
     public bool Popped => popped;
+    public GameObject explosion;
 
-  private void init()
+
+    private void init()
     {
         currentSize = 0;
         growing = true;
@@ -51,6 +53,7 @@ public class Pimple : MonoBehaviour
         }
         popped = true;
         onPopped.Invoke();
+        Instantiate(explosion, transform.position, transform.rotation);
         GameObject.Destroy(this.gameObject);
         spawner.Pimples.Remove(this);
 
