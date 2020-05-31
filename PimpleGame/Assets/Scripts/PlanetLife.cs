@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlanetLife : MonoBehaviour
 {
@@ -21,12 +23,21 @@ public class PlanetLife : MonoBehaviour
 
     AudioSource fillAudio;
 
+    public TextMeshProUGUI endOfGameScreenText;
+    public TextMeshProUGUI endOfGameScreenTextBacker;
+    public Animator endOfGameScreenAnimator;
+
+
     private void Awake()
     {
         fillAudio = GameObject.Find("FillAudio").GetComponent<AudioSource>();
         poolParticles.Stop();
         juicePouch = FindObjectOfType<JuicePouch>();
         handlePoolHeight();
+
+        if (endOfGameScreenText == null) { Debug.LogError("Need to hook up end of game screen"); }
+        if (endOfGameScreenTextBacker == null) { Debug.LogError("Need to hook up end of game screen"); }
+        if (endOfGameScreenAnimator == null) { Debug.LogError("Need to hook up end of game screen animator"); }
     }
 
     private void handlePoolHeight()
@@ -58,12 +69,18 @@ public class PlanetLife : MonoBehaviour
 
     private void win()
     {
-        Debug.Log("YOU WIN");
+        endOfGameScreenAnimator.SetBool("On", true);
+        endOfGameScreenText.text = "Y O U W I N";
+        endOfGameScreenTextBacker.text = "Y O U W I N";
+
     }
 
     private void lose()
     {
-        Debug.Log("YOU LOSE");
+        //losing changed to not be affected by planet life
+
+        //endOfGameScreenAnimator.SetBool("On", true);
+        //endOfGameScreenText.text = "Y O U L O S E";
     }
 
     private void OnTriggerEnter(Collider other)

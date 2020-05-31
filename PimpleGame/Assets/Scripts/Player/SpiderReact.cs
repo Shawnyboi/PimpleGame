@@ -5,60 +5,73 @@ using UnityEngine.Events;
 
 public class SpiderReact : MonoBehaviour
 {
-  [SerializeField] UnityEvent onReactStart = null;
-  [SerializeField] UnityEvent onReactEnd = null;
+    private PlayerLife playerLife;
 
-  [SerializeField] GameObject blinkRenderer;
+    [SerializeField] UnityEvent onReactStart = null;
+    [SerializeField] UnityEvent onReactEnd = null;
 
-  bool reacting = false;
+    [SerializeField] GameObject blinkRenderer;
 
-  [SerializeField] float reactTime = 1;
-  float reactRemaining = 0;
-  [SerializeField] float blinkRate = 10;
+    bool reacting = false;
 
-  private void Update()
-  {
-    if (reacting)
+    [SerializeField] float reactTime = 1;
+    float reactRemaining = 0;
+    [SerializeField] float blinkRate = 10;
+
+
+
+    private void Awake()
     {
-      if (reactRemaining <= 0)
-      {
-        reacting = false;
-        onReactEnd.Invoke();
-      }
-      reactRemaining -= Time.deltaTime;
+        playerLife = this.gameObject.GetComponent<PlayerLife>();
+        if (playerLife == null)
+        {
+            Debug.LogError("Missing PlayerLife component for spider react");
+        }
     }
-  }
-
-  IEnumerator blink()
-  {
-    if (blinkRenderer != null)
+    private void Update()
     {
-      blinkRenderer.SetActive(!blinkRenderer.activeSelf);
-      yield return new WaitForSeconds(Mathf.Min(1f / blinkRate, reactRemaining));
-
-      if (reacting)
-      {
-        yield return blink();
-      }
-      else
-      {
-        blinkRenderer.SetActive(true);
-      }
+        if (reacting)
+        {
+            if (reactRemaining <= 0)
+            {
+                reacting = false;
+                onReactEnd.Invoke();
+            }
+            reactRemaining -= Time.deltaTime;
+        }
     }
-  }
 
-
-  private void OnCollisionEnter(Collision collision)
-  {
-    if (collision.collider.gameObject.tag == "Spider" && !reacting)
+    IEnumerator blink()
     {
-      if (!reacting)
-      {
-        reacting = true;
-        reactRemaining = reactTime;
-        StartCoroutine(blink());
-        onReactStart.Invoke();
-      }
+        if (blinkRenderer != null)
+        {
+            blinkRenderer.SetActive(!blinkRenderer.activeSelf);
+            yield return new WaitForSeconds(Mathf.Min(1f / blinkRate, reactRemaining));
+
+            if (reacting)
+            {
+                yield return blink();
+            }
+            else
+            {
+                blinkRenderer.SetActive(true);
+            }
+        }
     }
-  }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.tag == "Spider" && !reacting)
+        {
+            if (!reacting)
+            {
+                reacting = true;
+                reactRemaining = reactTime;
+                playerLife.hit();
+                StartCoroutine(blink());
+                onReactStart.Invoke();
+            }
+        }
+    }
 }
