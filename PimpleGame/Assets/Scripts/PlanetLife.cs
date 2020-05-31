@@ -14,8 +14,8 @@ public class PlanetLife : MonoBehaviour
 
     public float juiceFillRate = 5f;
     public float pouchToPoolConversionRate = .1f;
-    public Slider poolSlider;
-    public Slider lifeSlider;
+    //public Slider poolSlider;
+    //public Slider lifeSlider;
     public GameObject poolCylinder;
     public float minPoolCylinderPos = -0.626f;
     public float maxPoolCylinderPos = -0.294f;
@@ -48,7 +48,7 @@ public class PlanetLife : MonoBehaviour
     public void depleteLife(float amount)
     {
         life -= amount;
-        lifeSlider.value = life / 100f;
+        //lifeSlider.value = life / 100f;
         if(life <= 0f)
         {
             lose();
@@ -59,7 +59,7 @@ public class PlanetLife : MonoBehaviour
     public void addToPool(float amount)
     {
         pool += amount;
-        poolSlider.value = pool / 100f;
+        //poolSlider.value = pool / 100f;
         if(pool >= 100)
         {
             win();
