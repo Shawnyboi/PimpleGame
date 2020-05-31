@@ -15,7 +15,7 @@ public class DashAudio : MonoBehaviour
 
     public void PlayDash()
     {
-        DashSource.pitch = Random.Range(1.0f, 1.2f);
+        DashSource.pitch = Random.Range(1.0f, 1.4f);
         transform.position = Player.position;
         DashSource.PlayOneShot(DashSound);
     }

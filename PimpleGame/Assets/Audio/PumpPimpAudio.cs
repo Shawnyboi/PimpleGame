@@ -12,15 +12,16 @@ public class PumpPimpAudio : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         PimpSource = GetComponent<AudioSource>();
+        PimpSource.volume = 1.5f;
     }
     public void PumpPimp()
     {
-        PimpSource.pitch += 0.2f;
+        PimpSource.pitch += 0.4f;
         transform.position = player.position;
         PimpSource.PlayOneShot(PimpClip);
     }
     public void ResetPitch()
     {
-        PimpSource.pitch = 0.5f; 
+        PimpSource.pitch = 0.4f; 
     }
 }
