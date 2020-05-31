@@ -15,12 +15,12 @@ public class PumpPimpAudio : MonoBehaviour
     }
     public void PumpPimp()
     {
-        PimpSource.pitch += 0.4f;
+        PimpSource.pitch += 0.1f;
         transform.position = player.position;
         PimpSource.PlayOneShot(PimpClip);
     }
     public void ResetPitch()
     {
-        PimpSource.pitch = 0.4f; 
+        PimpSource.pitch = 0.6f; 
     }
 }

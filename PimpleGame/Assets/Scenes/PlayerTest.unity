@@ -3298,6 +3298,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &811381991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2460298000064435186, guid: b3188397cbc0dbd4c970640c032c2725,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084714418}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609acb1e0106d7a45bc59ae9b6abd8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &813444114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3854,6 +3866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pool
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951207093729030151, guid: 94f3077d05803bf41b6bb02fa830fbfa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9134410757891089556, guid: 94f3077d05803bf41b6bb02fa830fbfa,
         type: 3}
@@ -6437,6 +6454,30 @@ PrefabInstance:
       propertyPath: sphere
       value: 
       objectReference: {fileID: 477218456}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 811381991}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SiperSounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941800483, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: onReactStart.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 614070693558432179, guid: 30b095f2ce3414de9ad9701d4da11c63,
         type: 3}
       propertyPath: dashStarted.m_PersistentCalls.m_Calls.Array.data[3].m_Target
