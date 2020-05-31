@@ -12,7 +12,6 @@ public class PumpPimpAudio : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         PimpSource = GetComponent<AudioSource>();
-        PimpSource.volume = 1.5f;
     }
     public void PumpPimp()
     {
