@@ -9,7 +9,10 @@ public class PlayerLife : MonoBehaviour
     public TextMeshProUGUI endOfGameScreenText;
     public TextMeshProUGUI endOfGameScreenTextBacker;
     public Animator endOfGameScreenAnimator;
+    public List<Sprite> hitSprites;
 
+    public Sprite aliveHeart;
+    public Sprite deadHeart;
 
     private int hitsTaken;
 
@@ -23,6 +26,7 @@ public class PlayerLife : MonoBehaviour
     public void hit()
     {
         hitsTaken += 1;
+        updateSprites();
         checkIfGameOver();
     }
 
@@ -33,6 +37,18 @@ public class PlayerLife : MonoBehaviour
             lose();
         }
     }
+
+    private void updateSprites()
+    {
+        if (hitsTaken <= 3)
+        {
+            for (int i = hitsTaken - 1; i >= 0; i--)
+            {
+                hitSprites[i] = deadHeart;
+            }
+        }
+    }
+
 
     private void lose()
     {
