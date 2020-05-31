@@ -9684,7 +9684,7 @@ Transform:
   m_GameObject: {fileID: 8302728316781301769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.36693, y: 0.36693, z: 0.36693}
   m_Children: []
   m_Father: {fileID: 193339457909344012}
   m_RootOrder: 0
@@ -9796,7 +9796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b213fd7ff212d4cbaa373cbbe20465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pumpRate: 500
+  pumpRate: 150
   reductionPerPump: 50
   pimple: {fileID: 0}
 --- !u!114 &7620080315312944176
@@ -9812,7 +9812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growthRate: 10
-  minimumLanceableSize: 20
+  minimumLanceableSize: 0
   planetDamageAmount: 1
   pimpleRenderer: {fileID: 3276345306647158412}
   spawner: {fileID: 0}
@@ -9885,5 +9885,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 0.5
-  maxScale: 4
+  maxScale: 2
   pimpleMesh: {fileID: 8302728316781301769}
