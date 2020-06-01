@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f92ef3ec55c435aa38234042e60211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxJuice: 100
+  maxJuice: 250
   minScale: 1
   maxScale: 1
   juiceRenderer: {fileID: 9137488717055694626}
