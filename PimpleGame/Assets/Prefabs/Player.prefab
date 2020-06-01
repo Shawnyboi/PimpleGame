@@ -562,6 +562,9 @@ MonoBehaviour:
   endOfGameScreenText: {fileID: 0}
   endOfGameScreenTextBacker: {fileID: 0}
   endOfGameScreenAnimator: {fileID: 0}
+  hitSprites: []
+  aliveHeart: {fileID: 0}
+  deadHeart: {fileID: 0}
 --- !u!1 &4404250375002451409
 GameObject:
   m_ObjectHideFlags: 0
