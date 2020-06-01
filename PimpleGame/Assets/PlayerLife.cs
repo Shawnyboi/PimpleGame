@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerLife : MonoBehaviour
     public TextMeshProUGUI endOfGameScreenText;
     public TextMeshProUGUI endOfGameScreenTextBacker;
     public Animator endOfGameScreenAnimator;
-    public List<Sprite> hitSprites;
+    public List<Image> hitSprites;
 
     public Sprite aliveHeart;
     public Sprite deadHeart;
@@ -44,7 +45,7 @@ public class PlayerLife : MonoBehaviour
         {
             for (int i = hitsTaken - 1; i >= 0; i--)
             {
-                hitSprites[i] = deadHeart;
+                hitSprites[i].sprite = deadHeart;
             }
         }
     }

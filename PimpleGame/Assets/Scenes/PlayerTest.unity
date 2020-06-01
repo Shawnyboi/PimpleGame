@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09895589, g: 0.3660338, b: 0.43477935, a: 1}
+  m_IndirectSpecularColor: {r: 0.099018015, g: 0.36616504, b: 0.43491778, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6654,6 +6654,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: hitSprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
       propertyPath: endOfGameScreenText
       value: 
       objectReference: {fileID: 859321268}
@@ -6665,6 +6669,28 @@ PrefabInstance:
       propertyPath: endOfGameScreenAnimator
       value: 
       objectReference: {fileID: 1631318908}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: hitSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 765238875}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: hitSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1781034968}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: hitSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 941931490}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: aliveHeart
+      value: 
+      objectReference: {fileID: 21300000, guid: 63cae1b754b6a5b40b096e83e9e1d7ee,
+        type: 3}
+    - target: {fileID: 1572510525, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
+      propertyPath: deadHeart
+      value: 
+      objectReference: {fileID: 21300000, guid: 039de63cd62a0ed418a4986fcb70b4fb,
+        type: 3}
     - target: {fileID: 1760324969, guid: 30b095f2ce3414de9ad9701d4da11c63, type: 3}
       propertyPath: sphere
       value: 
